@@ -1,0 +1,14 @@
+{
+  "name": "user-api",
+  "version": "1.0.0",
+  "description": "API utilisateur basée sur Firebase",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
