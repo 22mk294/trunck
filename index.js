@@ -2,7 +2,9 @@ const express = require('express');
 const admin = require('firebase-admin');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const serviceAccount = require('./serviceAccountKey.json');
+const serviceAccount = process.env.GOOGLE_SERVICE_ACCOUNT
+  ? JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT)
+  : require('./serviceAccountKey.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
